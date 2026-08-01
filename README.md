@@ -7,6 +7,7 @@ Personal [Scoop](https://scoop.sh) bucket.
 ```powershell
 scoop bucket add ven0m0 https://github.com/Ven0m0/scoop-bucket
 scoop install ven0m0/eden
+scoop install ven0m0/azaharplus
 ```
 
 ## Apps
