@@ -22,7 +22,7 @@ There is no `bin/checkver.ps1` / `bin/auto-pr.ps1` (the scripts the official Sco
 No build step; there's no test runner or CI workflow configured for the bucket itself (`.github/workflows/` doesn't exist).
 
 - Validate manifest JSON: `jq empty bucket/eden.json` (or any of the JSON-schema pre-commit hooks below).
-- Test a manifest locally: `scoop install "bucket/eden.json"`, or add this repo as a local bucket first — `scoop bucket add eden <path-to-this-repo>` then `scoop install eden/eden`.
+- Test a manifest locally: `scoop install "bucket/eden.json"`, or add this repo as a local bucket first — `scoop bucket add ven0m0 <path-to-this-repo>` then `scoop install ven0m0/eden`.
 - Pre-commit hooks are defined in `.github/.pre-commit-config.yaml`; run with `pre-commit run --all-files`. Only a subset applies to this repo's actual content — `check-json`, `check-yaml`, `trailing-whitespace`, `end-of-file-fixer`, and the `renovatebot`/`check-github-actions` validators. The rest (`ruff`, `basedpyright -p Scripts/snapmem`, the PSScriptAnalyzer hook targeting `Scripts/**/*.ps1`) reference paths that don't exist in this repo — they were carried over from an unrelated multi-language dotfiles project and are effectively no-ops here.
 
 ## Notable gaps
