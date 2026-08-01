@@ -1,0 +1,36 @@
+ci:
+  skip: [renovate-config-validator]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: check-json
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+      - id: detect-private-key
+      - id: check-case-conflict
+      - id: check-illegal-windows-names
+      - id: check-symlinks
+
+  - repo: https://github.com/renovatebot/pre-commit-hooks
+    rev: 44.5.2
+    hooks:
+      - id: renovate-config-validator
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.37.4
+    hooks:
+      - id: check-dependabot
+      - id: check-github-workflows
+      - id: check-jsonschema
+        name: check scoop manifests
+        files: ^bucket/.*\.json$
+        args:
+          - --schemafile
+          - https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json
