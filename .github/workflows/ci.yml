@@ -1,18 +1,29 @@
-name: ci
+name: CI
 
 on:
+  push:
   pull_request:
-    types: [opened, edited, synchronize]
+  workflow_dispatch:
 
 permissions:
   pull-requests: read
+  contents: read
 
 jobs:
-  pullRequestHandler:
+  ci:
     name: Pull Request Validator
     runs-on: windows-latest
+    strategy:
+      matrix:
+        shell: [powershell, pwsh]
+    defaults:
+      run:
+        shell: ${{ matrix.shell }}
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout Bucket
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
       - name: Pull Request Validator
         uses: ScoopInstaller/GithubActions@main
         env:
