@@ -9,16 +9,14 @@ permissions:
   pull-requests: read
   contents: read
 
+defaults:
+  run:
+    shell: pwsh
+
 jobs:
   ci:
     name: Pull Request Validator
     runs-on: windows-latest
-    strategy:
-      matrix:
-        shell: [powershell, pwsh]
-    defaults:
-      run:
-        shell: ${{ matrix.shell }}
     steps:
       - name: Checkout Bucket
         uses: actions/checkout@v7
