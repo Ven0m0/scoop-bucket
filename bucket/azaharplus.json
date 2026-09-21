@@ -1,5 +1,5 @@
 {
-    "version": "2126.0-A",
+    "version": "2126.1-A",
     "description": "Nintendo 3DS emulator, fork of Azahar with restored features",
     "homepage": "https://github.com/AzaharPlus/AzaharPlus",
     "license": {
@@ -8,11 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AzaharPlus/AzaharPlus/releases/download/AZAHAR_PLUS_2126_0_A/azaharplus-2126.0-A-windows.zip",
-            "hash": "c7f546dc1251aabe27f712d0194b8878a1df0e234c307cd1d425fc248b7e7d49"
+            "url": "https://github.com/AzaharPlus/AzaharPlus/releases/download/AZAHAR_PLUS_2126_1_B/azaharplus-2126.1-A-windows.zip",
+            "hash": "111fb127e7a521b3ef379ef317728bc1edbd300e2693f3db346382d55644a529"
         }
     },
-    "extract_dir": "azaharplus-2126.0-A-windows",
+    "extract_dir": "azaharplus-2126.1-A-windows",
     "bin": "azahar.exe",
     "shortcuts": [
         [
