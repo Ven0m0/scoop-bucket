@@ -1,0 +1,29 @@
+{
+  "version": "0.95.9",
+  "description": "Windows driver for Gaming Mod Kits joysticks and controllers",
+  "homepage": "https://github.com/gamingmodkits/GMK-Driver",
+  "license": {
+    "identifier": "Freeware",
+    "url": "https://www.gamingmodkits.com"
+  },
+  "notes": "Requires the ViGEmBus driver for virtual Xbox controller support: https://github.com/nefarius/ViGEmBus/releases",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/gamingmodkits/GMK-Driver/releases/download/v0.95.9/GMKDriver-0.95.9.zip",
+      "hash": "115c0e1c7465a634f3944bb3dcab012ea89f9a1ecbebbb8860fae627a13ab5c6"
+    }
+  },
+  "bin": "GMKDriverNetUI.exe",
+  "shortcuts": [["GMKDriverNetUI.exe", "GMK Driver"]],
+  "checkver": {
+    "url": "https://api.github.com/repos/gamingmodkits/GMK-Driver/releases/latest",
+    "regex": "\"tag_name\":\\s*\"v([\\d.]+)\""
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/gamingmodkits/GMK-Driver/releases/download/v$version/GMKDriver-$version.zip"
+      }
+    }
+  }
+}
