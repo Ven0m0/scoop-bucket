@@ -17,11 +17,13 @@ jobs:
   ci:
     name: Pull Request Validator
     runs-on: windows-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout Bucket
         uses: actions/checkout@v7
         with:
           fetch-depth: 2
+          persist-credentials: false
       - name: Pull Request Validator
         uses: ScoopInstaller/GithubActions@main
         env:

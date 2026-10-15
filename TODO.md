@@ -1,3 +1,0 @@
-- [ ] add [ssgg](https://github.com/Ven0m0/steelseriesgg-rs) as a scoop package.
-- [ ] check if @bucket/eden.json needs an update
-- [ ] add all missing packages to the auto update workflow

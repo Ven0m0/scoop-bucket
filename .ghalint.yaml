@@ -1,0 +1,11 @@
+# SHA pinning is intentionally not used; actions float on their latest major tag.
+excludes:
+  - policy_name: action_ref_should_be_full_length_commit_sha
+    action_name: actions/checkout
+  - policy_name: action_ref_should_be_full_length_commit_sha
+    action_name: ScoopInstaller/GithubActions
+  # Excavator pushes manifest updates, so it needs the checkout credentials.
+  - policy_name: checkout_persist_credentials_should_be_false
+    workflow_file_path: .github/workflows/excavator.yml
+    job_name: excavate
+    step_name: Checkout

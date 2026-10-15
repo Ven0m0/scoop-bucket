@@ -12,9 +12,12 @@ jobs:
   pullRequestHandler:
     name: PullRequestHandler
     runs-on: windows-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - name: PullRequestHandler
         uses: ScoopInstaller/GithubActions@main
         env:
