@@ -10,6 +10,7 @@ scoop install ven0m0/eden
 scoop install ven0m0/azaharplus
 scoop install ven0m0/gmk-driver
 scoop install ven0m0/ssgg
+scoop install ven0m0/eglv2
 ```
 
 ## Apps
@@ -20,3 +21,4 @@ scoop install ven0m0/ssgg
 | [azaharplus](bucket/azaharplus.json) | Nintendo 3DS emulator, fork of Azahar with restored features |
 | [gmk-driver](bucket/gmk-driver.json) | Windows driver for Gaming Mod Kits joysticks and controllers |
 | [ssgg](bucket/ssgg.json) | Open-source SteelSeries GG replacement: RGB lighting, GameSense-compatible server, profiles |
+| [eglv2](bucket/eglv2.json) | Epic Games Launcher v2 preview |
