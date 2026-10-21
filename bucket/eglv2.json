@@ -1,43 +1,49 @@
 {
-  "version": "0.98.1",
-  "description": "Epic Games Launcher v2 preview (new Tauri-based launcher)",
-  "homepage": "https://launcher.epicgames.com",
-  "license": {
-    "identifier": "Proprietary",
-    "url": "https://www.epicgames.com/site/en-US/eula"
-  },
-  "notes": "Installs to $env:LOCALAPPDATA\\Epic Games\\Launcher, outside Scoop. The launcher updates itself.",
-  "architecture": {
-    "64bit": {
-      "url": "https://content-download-egs.distro.on.epicgames.com/Builds/EGLv2/0.98.1%2Bgd6c4f03/Windows/EpicGamesLauncherSetup.exe#/setup.exe",
-      "hash": "9655879d1def196b2850f7eb4c0d7da6cf43f559b2b1f70dbaee7b38e3b3445f"
-    }
-  },
-  "installer": {
-    "file": "setup.exe",
-    "args": ["--silent", "--skip-autolaunch"],
-    "keep": true
-  },
-  "uninstaller": {
-    "file": "setup.exe",
-    "args": ["--silent", "--uninstall"]
-  },
-  "checkver": {
-    "script": [
-      "$r = [Net.HttpWebRequest]::Create('https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherSetup-x86_64.exe')",
-      "$r.Method = 'HEAD'",
-      "$r.AllowAutoRedirect = $false",
-      "$resp = $r.GetResponse()",
-      "$resp.Headers['Location']",
-      "$resp.Close()"
-    ],
-    "regex": "EGLv2/(?<version>[\\d.]+)%2B(?<commit>[0-9a-z]+)/"
-  },
-  "autoupdate": {
+    "version": "0.99.0",
+    "description": "Epic Games Launcher v2 preview (new Tauri-based launcher)",
+    "homepage": "https://launcher.epicgames.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.epicgames.com/site/en-US/eula"
+    },
+    "notes": "Installs to $env:LOCALAPPDATA\\Epic Games\\Launcher, outside Scoop. The launcher updates itself.",
     "architecture": {
-      "64bit": {
-        "url": "https://content-download-egs.distro.on.epicgames.com/Builds/EGLv2/$version%2B$matchCommit/Windows/EpicGamesLauncherSetup.exe#/setup.exe"
-      }
+        "64bit": {
+            "url": "https://content-download-egs.distro.on.epicgames.com/Builds/EGLv2/0.99.0%2Bgbf52ace/Windows/EpicGamesLauncherSetup.exe#/setup.exe",
+            "hash": "5bb70ef6bb41489562b63f8b023ef9e3a86575c2a4db3ff9cbafe7de2ff121ef"
+        }
+    },
+    "installer": {
+        "file": "setup.exe",
+        "args": [
+            "--silent",
+            "--skip-autolaunch"
+        ],
+        "keep": true
+    },
+    "uninstaller": {
+        "file": "setup.exe",
+        "args": [
+            "--silent",
+            "--uninstall"
+        ]
+    },
+    "checkver": {
+        "script": [
+            "$r = [Net.HttpWebRequest]::Create('https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherSetup-x86_64.exe')",
+            "$r.Method = 'HEAD'",
+            "$r.AllowAutoRedirect = $false",
+            "$resp = $r.GetResponse()",
+            "$resp.Headers['Location']",
+            "$resp.Close()"
+        ],
+        "regex": "EGLv2/(?<version>[\\d.]+)%2B(?<commit>[0-9a-z]+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://content-download-egs.distro.on.epicgames.com/Builds/EGLv2/$version%2B$matchCommit/Windows/EpicGamesLauncherSetup.exe#/setup.exe"
+            }
+        }
     }
-  }
 }
