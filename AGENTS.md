@@ -35,7 +35,7 @@ No build step; there's no test runner or CI workflow configured for the bucket i
 <!-- headroom:memory-instructions -->
 ## Memory
 
-Use the `headroom_memory` MCP server for persistent cross-session knowledge.
+Use the `headroom_memory` MCP server, `icm` MCP server or `obsidian-hybrid-search` MCP server for persistent cross-session knowledge.
 
 **Before** answering questions about prior decisions, conventions, project context,
 architecture, user preferences, org info, codenames, debugging history, or anything
