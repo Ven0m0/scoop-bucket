@@ -5,16 +5,31 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.18/ssgg-windows-x86_64.exe#/ssgg.exe",
-            "hash": "2cee7a7c9eb011e4400836c5489d53b4dab3d187598545dc342838a333c224c4"
+            "url": [
+                "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.18/ssgg-windows-x86_64.exe#/ssgg.exe",
+                "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.18/ssgg-gui-windows-x86_64.exe#/ssgg-gui.exe"
+            ],
+            "hash": [
+                "2cee7a7c9eb011e4400836c5489d53b4dab3d187598545dc342838a333c224c4",
+                "eb28bd8b957c6087e96bbaae70e15ab47c04c89788c5975c60ccc76a1a145e60"
+            ]
         }
     },
     "bin": "ssgg.exe",
+    "shortcuts": [
+        [
+            "ssgg-gui.exe",
+            "ssgg"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v$version/ssgg-windows-x86_64.exe#/ssgg.exe"
+                "url": [
+                    "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v$version/ssgg-windows-x86_64.exe#/ssgg.exe",
+                    "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v$version/ssgg-gui-windows-x86_64.exe#/ssgg-gui.exe"
+                ]
             }
         }
     }
