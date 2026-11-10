@@ -1,36 +1,31 @@
 {
-    "version": "0.1.19",
-    "description": "Open-source SteelSeries GG replacement: RGB lighting, GameSense-compatible server, profiles",
-    "homepage": "https://github.com/Ven0m0/steelseriesgg-rs",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": [
-                "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.19/ssgg-windows-x86_64.exe#/ssgg.exe",
-                "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.19/ssgg-gui-windows-x86_64.exe#/ssgg-gui.exe"
-            ],
-            "hash": [
-                "116d972435e3e3d8c3423ac6d0ef1ff3a0bf8e4c564a3169cece00e18c24145d",
-                "f2294415de33b1c621b88acda6cd56d6f69772db38bfda4eb8aa24d9d95e917c"
-            ]
-        }
-    },
-    "bin": "ssgg.exe",
-    "shortcuts": [
-        [
-            "ssgg-gui.exe",
-            "ssgg"
-        ]
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": [
-                    "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v$version/ssgg-windows-x86_64.exe#/ssgg.exe",
-                    "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v$version/ssgg-gui-windows-x86_64.exe#/ssgg-gui.exe"
-                ]
-            }
-        }
-    }
+	"version": "0.1.19",
+	"description": "Open-source SteelSeries GG replacement: RGB lighting, GameSense-compatible server, profiles",
+	"homepage": "https://github.com/Ven0m0/steelseriesgg-rs",
+	"license": "MIT",
+	"architecture": {
+		"64bit": {
+			"url": [
+				"https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.19/ssgg-windows-x86_64-v3.exe#/ssgg.exe",
+				"https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.19/ssgg-gui-windows-x86_64-v3.exe#/ssgg-gui.exe"
+			],
+			"hash": [
+				"a27724cb04d484bd38e17779f6a1819b8cec2dff5956e8c47fef3e60a50ddc7b",
+				"aa2a4409ca5fa1c8b560c9d9571bdd80992aa0a5eeb12c8c365f9fba7a592c9f"
+			]
+		}
+	},
+	"bin": "ssgg.exe",
+	"shortcuts": [["ssgg-gui.exe", "ssgg"]],
+	"checkver": "github",
+	"autoupdate": {
+		"architecture": {
+			"64bit": {
+				"url": [
+					"https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v$version/ssgg-windows-x86_64-v3.exe#/ssgg.exe",
+					"https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v$version/ssgg-gui-windows-x86_64-v3.exe#/ssgg-gui.exe"
+				]
+			}
+		}
+	}
 }

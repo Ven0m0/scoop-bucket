@@ -30,3 +30,18 @@ No build step; there's no test runner or CI workflow configured for the bucket i
 - No root `.gitignore` (only `.github/.gitignore`, `.codegraph/.gitignore`, `.serena/.gitignore` — these only govern their own subdirectories, not the repo root).
 - No `README.md`.
 - `renovate.json` and `dependabot.yml` configure ecosystems (Python/uv, npm, cargo, PowerShell) this repo doesn't use — also inherited boilerplate, not a signal that those toolchains belong here.
+
+
+<!-- headroom:memory-instructions -->
+## Memory
+
+Use the `headroom_memory` MCP server for persistent cross-session knowledge.
+
+**Before** answering questions about prior decisions, conventions, project context,
+architecture, user preferences, org info, codenames, debugging history, or anything
+from past sessions — call `memory_search` first.
+
+**After** making durable decisions, discovering conventions, or learning important
+facts — call `memory_save` to persist them for future sessions.
+
+Memory is your first source of truth for anything not visible in the current conversation.
