@@ -1,5 +1,5 @@
 {
-    "version": "0.114.0",
+    "version": "0.115.0",
     "description": "Epic Games Launcher v2 preview (new Tauri-based launcher)",
     "homepage": "https://launcher.epicgames.com",
     "license": {
@@ -9,8 +9,8 @@
     "notes": "Installs to $env:LOCALAPPDATA\\Epic Games\\Launcher, outside Scoop. The launcher updates itself.",
     "architecture": {
         "64bit": {
-            "url": "https://content-download-egs.distro.on.epicgames.com/Builds/EGLv2/0.114.0%2Bg04485d6/Windows/EpicGamesLauncherSetup.exe#/setup.exe",
-            "hash": "5f37f455d97dea054ce1a54de3e0f0dbb8d90b4bae242cffdcfb365b2b9869f9"
+            "url": "https://content-download-egs.distro.on.epicgames.com/Builds/EGLv2/0.115.0%2Bgd6d2ef8/Windows/EpicGamesLauncherSetup.exe#/setup.exe",
+            "hash": "2dfe17cdb3cdbcbcc5f866dde482d2e18a361c768013519ccef59449763c9cb5"
         }
     },
     "installer": {
