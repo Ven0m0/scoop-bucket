@@ -1,0 +1,34 @@
+name: Manifest lint
+
+on:
+  push:
+    paths: ["bucket/**", ".github/workflows/manifest-lint.yml"]
+  pull_request:
+    paths: ["bucket/**", ".github/workflows/manifest-lint.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  manifests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      # Excavator can only bump a manifest that has checkver and autoupdate.
+      - name: Require version, checkver, autoupdate and a download hash
+        run: |
+          set -euo pipefail
+          fail=0
+          for f in bucket/*.json; do
+            jq empty "$f"
+            for key in version homepage license checkver autoupdate; do
+              jq -e --arg k "$key" 'has($k)' "$f" >/dev/null || { echo "::error file=$f::missing '$key'"; fail=1; }
+            done
+            jq -e '[.. | objects | select(has("url")) | select(has("hash"))] | length > 0' "$f" >/dev/null \
+              || { echo "::error file=$f::no url with a hash"; fail=1; }
+          done
+          exit "$fail"
