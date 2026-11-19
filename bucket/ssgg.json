@@ -1,17 +1,17 @@
 {
-    "version": "0.1.22",
+    "version": "0.1.23",
     "description": "Open-source SteelSeries GG replacement: RGB lighting, GameSense-compatible server, profiles",
     "homepage": "https://github.com/Ven0m0/steelseriesgg-rs",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.22/ssgg-windows-x86_64-v3.exe#/ssgg.exe",
-                "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.22/ssgg-gui-windows-x86_64-v3.exe#/ssgg-gui.exe"
+                "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.23/ssgg-windows-x86_64-v3.exe#/ssgg.exe",
+                "https://github.com/Ven0m0/steelseriesgg-rs/releases/download/v0.1.23/ssgg-gui-windows-x86_64-v3.exe#/ssgg-gui.exe"
             ],
             "hash": [
-                "111b3d74124124ae3819bc84f90e6683a2d281ecd465e7bbe79dde04ef1677bb",
-                "1f17bd26506ffc1ea08be72e0be1167f408259fb467ffd8fb45fe91be7fc313e"
+                "2ac8fbd5e37593ff48cf10a82290ec15332bca208694f0a44a96f25f63433c9d",
+                "396447f53aedc3558c9e043f92e4859714e446bcd0d44e5c14cf1f9e33cb962c"
             ]
         }
     },
